@@ -220,7 +220,7 @@ footer{
         @include normal_layout(100%,0 auto,0);
         max-width: 1280px;
         .foot-info{
-            i{
+            i{ 
                 background-image: url('/img/main-icon.png');            
                 background-position: -198px -0px;
                 background-repeat: no-repeat;
