@@ -119,7 +119,7 @@ header > div.head h1 {
   margin: 0;
 }
 header > div.head h1 i {
-  background-image: url("/img/main-icon.png");
+  background-image: url("../img/main-icon.png");
   background-position: -190px 0px;
   background-repeat: no-repeat;
   display: inline-block;
@@ -267,7 +267,7 @@ footer > div {
   max-width: 1280px;
 }
 footer > div .foot-info i {
-  background-image: url("/img/main-icon.png");
+  background-image: url("../img/main-icon.png");
   background-position: -198px 0px;
   background-repeat: no-repeat;
   display: inline-block;
@@ -568,7 +568,7 @@ main .title-center p {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  background-image: url("/img/main-icon.png");
+  background-image: url("../img/main-icon.png");
   background-repeat: no-repeat;
   display: inline-block;
   width: 32px;
@@ -2074,7 +2074,7 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     width: 50%;
   }
   header div.hover_menu ul.hover_menu_ui li h2 i {
-    background-image: url("/img/main-icon.png");
+    background-image: url("../img/main-icon.png");
     background-position: 0 0px;
     background-repeat: no-repeat;
     display: inline-block;
@@ -2554,7 +2554,7 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     width: 50%;
   }
   header div.hover_menu ul.hover_menu_ui li h2 i {
-    background-image: url("/img/main-icon.png");
+    background-image: url("../img/main-icon.png");
     background-position: 0 0px;
     background-repeat: no-repeat;
     display: inline-block;
