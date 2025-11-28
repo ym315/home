@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="기프트레터">
+    <meta name="description" content="편리함과 즐거움을 나누는 성공적인 모바일커머스 기프트레터">
+    <title>GIFT LETTER</title>
+
+    <link rel="icon" href="img/pavicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">    
+    
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>   
+
+    <script src="js/common.js"></script>
+
+ <style>
+.text-container {
+    width:360px;
+    background: #eee;
+  white-space: pre-line; /* 줄바꿈 유지 */
+  line-height: 1.8; /* 줄 간격 */
+}
+
+.text-container span::before {
+  content: "· "; /* 앞에 붙을 기호 */
+  color: #333; /* 기호 색상 */
+  font-weight: bold; /* 강조 */
+}
+
+ </style>
+
+</head>
+<body>
+
+    <div class="text-container">
+        긴 텍스트의 첫 번째 문단입니다. 이 텍스트는 문단의 앞에 기호가 붙습니다.
+        두 번째 문단은 새로운 줄에서 시작하지만, HTML 태그로 나뉘지 않습니다. 여기에 또 다른 기호가 붙습니다. 문장이 길어질 경우엔 어떻게 되는것인지?
+        세 번째 문단도 마찬가지로 기호가 필요합니다.
+      </div>
+       
+      
+      <script>
+        // $(function(){
+        // });
+        document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector(".text-container");
+  const lines = container.innerText.split("\n").filter(line => line.trim() !== "");
+  container.innerHTML = lines.map(line => `<span>${line}</span>`).join("\n");
+});
+        </script>
+
+</body>
+</html>
