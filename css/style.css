@@ -126,6 +126,9 @@ header > div.head h1 i {
   width: 180px;
   height: 50px;
 }
+header > div.head h1 i.active {
+  background-position: -387px 0px;
+}
 header > div.head nav {
   width: 75%;
   height: 100%;
@@ -416,6 +419,24 @@ aside div ul li:first-child:before {
 }
 .paging li.on a {
   color: #fff;
+}
+
+main .title {
+  margin-bottom: 30px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 2vh !important;
+}
+main .title h3 {
+  font-size: 0.8em;
+  font-weight: 400;
+}
+main .title h4 {
+  font-size: 1.8rem;
+}
+main .title p {
+  white-space: pre-line;
 }
 
 main .title-left {
@@ -1525,6 +1546,7 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
   display: -moz-flex;
   display: -o-flex;
   -webkit-flex-wrap: wrap;
+  margin: 0 auto;
   /*버튼*/
   /*indigater*/
 }
@@ -1585,6 +1607,11 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
   height: 2px;
   background: #eee;
   font-size: 0;
+  padding: 0;
+}
+.sub03 .sub3_sec05 article.slide .slick-dots li button::before {
+  opacity: 0;
+  content: "";
 }
 .sub03 .sub3_sec05 article.slide .slick-dots li.slick-active button {
   background: #00b2a9;
@@ -1618,20 +1645,20 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
 .sub03 .sub3_sec06 article p {
   display: inline-block;
   padding: 1.5vh 2.5vw;
-  background: #00b2a9;
+  background: #fff;
+  color: #000;
   transition: 0.5s;
+  border: 1px solid #666;
   border-radius: 25px;
-  box-shadow: 5px 5px 2px #003349;
 }
 .sub03 .sub3_sec06 article p a {
-  color: #fff;
+  color: currentColor;
 }
 .sub03 .sub3_sec06 article p:hover {
   background: #003349;
-  box-shadow: 5px 5px 0px #00b2a9;
 }
 .sub03 .sub3_sec06 article p:hover a {
-  color: #00b2a9;
+  color: #fff;
 }
 
 .sub04 {
@@ -2408,7 +2435,7 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     margin-bottom: 2vh;
     position: relative;
     text-align: center;
-    width: 100%;
+    width: 90%;
   }
   aside {
     right: 0.5vh;
@@ -2427,7 +2454,7 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     display: -moz-flex;
     display: -o-flex;
     -webkit-flex-wrap: wrap;
-    height: 60px;
+    height: 65px;
     position: relative;
   }
   header > div.head h1 {
@@ -2435,9 +2462,12 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     margin: 0 auto;
     position: relative;
   }
-  header > div.head h1 img {
-    width: 100%;
-    max-width: 145px;
+  header > div.head h1 i {
+    background-position: -176px -103px;
+    width: 150px;
+  }
+  header > div.head h1 i.active {
+    background-position: -347px -103px;
   }
   header > div.head nav {
     display: none;
@@ -2479,7 +2509,7 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     right: 0;
     width: 100%;
     height: 2px;
-    background: #000;
+    background: #fff;
     border-radius: 4px;
   }
   header > div.head nav.mobile_menu a.menu-trigger span:nth-of-type(1) {
@@ -2574,7 +2604,7 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     font-size: 1.5em;
   }
   footer > div {
-    width: 96%;
+    width: 90%;
     flex-wrap: wrap;
     max-width: 768px;
   }
@@ -2619,10 +2649,10 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     font-size: 1.8rem;
   }
   .newmain .main-our > div {
-    width: 96%;
+    width: 90%;
   }
   .newmain .main-our ul {
-    width: 96%;
+    width: 90%;
     margin: 0 auto;
     padding: 2vh 0;
     min-width: auto;
@@ -2654,6 +2684,7 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
   }
   .newmain .slide-partner .slick-prev, .newmain .slide-partner .slick-next {
     z-index: 3;
+    position: absolute;
   }
   .newmain .slide-partner .slick-prev {
     left: 42%;
@@ -2677,16 +2708,18 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     height: auto;
   }
   .newmain .main-biz .main-biz-img {
-    width: 95%;
+    width: 90%;
+    height: auto;
   }
   .newmain .flow-wrap {
     min-width: 728px;
   }
   .newmain .flow-wrap .img-box img {
     filter: grayscale(0);
+    max-width: 80%;
   }
   .newmain .main-certifi {
-    width: 96%;
+    width: 90%;
     min-width: 320px;
     max-width: 767px;
     flex-wrap: wrap;
@@ -2713,9 +2746,10 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     min-width: 320px;
     max-width: 767px;
     text-align: center;
+    width: 90%;
   }
   .newmain .main-news > ul {
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
   }
@@ -2748,7 +2782,7 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     display: -moz-flex;
     display: -o-flex;
     -webkit-flex-wrap: wrap;
-    width: 100%;
+    width: 90%;
     margin: 20px auto;
     text-align: center;
   }
@@ -2948,7 +2982,8 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     display: block;
   }
   .sub03 .sub3_sec05 article {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
   .sub03 .sub3_sec05 article:first-child {
     padding: 2vh 0;

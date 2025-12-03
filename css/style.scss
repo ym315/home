@@ -10,10 +10,8 @@ $basicmint : #00b2a9;
 $basicblue: #003349;
 $basicwhite : #fff;
 $basicblck : #000;
-
 $basicgray:#666;
 $basicsoftgray : #eee;
-
 $f9: #f9f9f9;
 $f5: #f5f5f5;
 $c111 : #111;
@@ -120,6 +118,9 @@ header{
                 display: inline-block;
                 width:180px;
                 height: 50px;
+                &.active{
+                    background-position: -387px -0px;
+                }
             }            
         }
         nav{
@@ -339,6 +340,18 @@ aside{
         background:$basicmint; 
         a{color:$basicwhite;  }
     }
+    }
+}
+main {
+    .title{        
+        margin-bottom: 30px;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 2vh !important;
+        h3{font-size: .8em; font-weight: 400;}
+        h4{font-size: 1.8rem;}
+        p{white-space: pre-line;}
     }
 }
 
@@ -1021,6 +1034,8 @@ main .title-center{
 .sub03{
     position:relative;
     // @include normal_layout(100%,0 auto ,0 );
+
+
     section:nth-of-type(n+2){margin:10vh auto;}    
     .sub3_sec01{
         position: relative;        
@@ -1277,12 +1292,14 @@ main .title-center{
                 background:$basicwhite;
                 border:2px solid $basicmint;
                 @include display_set(flex,center ,center );
+                margin:0 auto;
                 .slide_div{
                     @include normal_layout(100%,0 auto,0);
                     overflow: hidden;
                     img{width:53%; max-width:53%; height:auto; margin:0 auto;}
                 }  
                 /*버튼*/
+                
                 .slick-prev,
                 .slick-next{
                     border:none;
@@ -1321,14 +1338,15 @@ main .title-center{
                 }
                 .slick-dots li button {
                     border:none;
-                    width:45px; height:2px;
-                    // border-radius: 100%;
+                    width:45px; height:2px;                    
                     background:$basicsoftgray;
-                    font-size:0;
+                    font-size:0; padding:0;
+                    &::before{opacity: 0; content:'';}
                 }
                 .slick-dots li.slick-active button {    
                     background:$basicmint;
                 }
+                
             }//artilcle slide e            
         }//article e
         
@@ -1354,23 +1372,20 @@ main .title-center{
                 }
             }
             p{
-                // position:absolute;
-                // bottom:2%; left:50%;
-                // transform:translate(-50%,-2%);
                 display: inline-block;                
                 padding:1.5vh 2.5vw;
-                background:$basicmint;
+                background:$basicwhite;
+                color: $basicblck;
                 transition: .5s;
-                border-radius: 25px;
-                box-shadow: 5px 5px 2px $basicblue;
+                border:1px solid $basicgray;
+                border-radius: 25px;                
                 a{
-                    color:$basicwhite;
+                    color:currentColor;
                 }  
             &:hover{
-                background:$basicblue;
-                box-shadow: 5px 5px 0px $basicmint;
+                background:$basicblue;               
                 a{
-                    color:$basicmint;
+                    color:$basicwhite;
                 }            
             }
             }
@@ -2134,7 +2149,7 @@ main{
             margin-bottom: 2vh;
             position: relative;
             text-align: center;
-            width: 100%;
+            width: 90%;
         }
     }
     aside{right:0.5vh;}
@@ -2144,16 +2159,19 @@ main{
         >div.head{   
             @include normal_layout(90%,0 auto,0);
             @include display_set(flex,space-around,center);
-            height: 60px;
+            height: 65px;
             position: relative;
             h1{
                 width: 30%;
                 margin:0 auto;
                 position: relative;
-                img{
-                    width:100%;
-                    max-width: 145px;
-                }              
+                    i{                        
+                       background-position: -176px -103px;
+                        width: 150px;
+                    &.active{
+                        background-position: -347px -103px;
+                    }
+                    }     
             }
             nav{
                 display: none;
@@ -2194,7 +2212,7 @@ main{
                         right: 0;
                         width: 100%;
                         height: 2px;
-                        background: $basicblck;
+                        background: $basicwhite;
                         border-radius: 4px;                
                     &:nth-of-type(1){
                         top: 0;                    
@@ -2282,7 +2300,7 @@ main{
     
     footer{       
         >div{            
-            width:96%;
+            width:90%;
             flex-wrap: wrap;
             max-width: 768px;
             // .foot-info{}
@@ -2304,13 +2322,10 @@ main{
     }//footer
     
     // 서브 페이지 공통사항
-    .sub_common{
-    
+    .sub_common{    
             div:last-child{
-                width:90%;
-    
-            }
-    
+                width:90%;    
+            }    
     }
     
     
@@ -2675,9 +2690,9 @@ main{
                 }
         }//메인 이미지
         .main-our{
-                >div{width:96%;}        
+                >div{width:90%;}        
                 ul{
-                    @include normal_layout(96%,0 auto,2vh 0);      
+                    @include normal_layout(90%,0 auto,2vh 0);      
                     min-width: auto;
                     flex-wrap: wrap;
                     li{
@@ -2709,7 +2724,7 @@ main{
                     }
             }
 
-        .slick-prev, .slick-next{z-index: 3;}
+        .slick-prev, .slick-next{z-index: 3; position: absolute;}
         .slick-prev{left:42%;}    
         .slick-next{right:42%;}
         
@@ -2725,15 +2740,15 @@ main{
                 flex-direction: column;
                 height: auto;
             }   
-            .main-biz-img{width:95%;}
+            .main-biz-img{width:90%; height: auto;}
         }
         .flow-wrap {
             min-width: 728px;
-        .img-box{img{filter: grayscale(0);}}
+        .img-box{img{filter: grayscale(0); max-width: 80%;}}
             }
 
         .main-certifi{
-            width:96%;
+            width:90%;
             min-width: 320px;
             max-width: 767px;
             flex-wrap: wrap;
@@ -2752,8 +2767,9 @@ main{
             min-width: 320px;
             max-width: 767px;
             text-align: center;
+            width: 90%;
             >ul{            
-                @include normal_layout(95%,0 auto,0);
+                @include normal_layout(100%,0 auto,0);
                 li{
                     width:49%;
                     margin-right: 2%;
@@ -2773,13 +2789,12 @@ main{
             }
             .map-sec{
                 margin-right: 0;
-                width: 90%;
-            
+                width: 90%;            
                 
             }
             .map-txt{
                 @include display_set(flex,space-between,center);
-                width: 100%;
+                width: 90%;
                 margin:20px auto;
                 text-align: center;
             }
@@ -3015,11 +3030,13 @@ main{
             }
         }
         .sub3_sec05{
+            
             height:auto;
             overflow: hidden;
             display:block;
             article{
-                width:100%;
+                width:90%;
+                margin: 0 auto;
                 &:first-child{
                     padding:2vh 0;
                     div{

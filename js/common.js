@@ -38,7 +38,7 @@ $(document).ready(function(){
                     console.log('헤더테스트')
                 } 
                 $('.main-menu > li').addClass('change');
-                $('.head h1 i').css("background-position","-387px -0px")
+                $('.head h1 i').addClass('active');                
                 $('a.menu-trigger span').css('background','#000')
 
                 // $('.head nav>ul li ul').addClass('on');
@@ -48,7 +48,7 @@ $(document).ready(function(){
                 // $('header').css("background","transparent");
                 $('header').removeClass("active");
                 $('.main-menu > li').removeClass('change');
-                $('.head h1 i').css("background-position","-190px -0px")
+                $('.head h1 i').removeClass('active');                
                 $('.head nav>ul li ul').removeClass('on');
                 $('a.menu-trigger span').css('background','#fff')
 
