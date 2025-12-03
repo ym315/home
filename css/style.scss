@@ -1334,17 +1334,23 @@ main .title-center{
                 }
                 .slick-dots li {
                     display: inline-block;
-                    // margin:0 3px;                    
-                }
-                .slick-dots li button {
-                    border:none;
-                    width:45px; height:2px;                    
-                    background:$basicsoftgray;
-                    font-size:0; padding:0;
-                    &::before{opacity: 0; content:'';}
-                }
-                .slick-dots li.slick-active button {    
-                    background:$basicmint;
+                    width: auto;
+                    // margin:0 3px;
+                    button{
+                         content:'';
+                        border:none;
+                        width:45px; height:2px;                    
+                        background:$basicsoftgray;
+                        font-size:0; padding:0;
+                        &::before{
+                            content:'';
+                            opacity: 0;}           
+                    }
+                    &.slick-active{
+                        button{
+                            background: $basicmint;
+                        }
+                    }
                 }
                 
             }//artilcle slide e            
@@ -2099,18 +2105,16 @@ main{
         height:auto;
         overflow: hidden;
         display:block;
-        article{
-            width:100%;
+        width: 90%;
+        article{            
             height:100%;
             display: block;
+            margin: 0 auto;
             &:first-child{
                 width:100%;
                 padding:3vh 0;
                 display: block;
-
-                div{
-                    text-align: center;
-                }
+                div{text-align: center;}
             }
             &.slide{                
                 width:100%;

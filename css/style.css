@@ -1600,8 +1600,10 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
 }
 .sub03 .sub3_sec05 article.slide .slick-dots li {
   display: inline-block;
+  width: auto;
 }
 .sub03 .sub3_sec05 article.slide .slick-dots li button {
+  content: "";
   border: none;
   width: 45px;
   height: 2px;
@@ -1610,8 +1612,8 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
   padding: 0;
 }
 .sub03 .sub3_sec05 article.slide .slick-dots li button::before {
-  opacity: 0;
   content: "";
+  opacity: 0;
 }
 .sub03 .sub3_sec05 article.slide .slick-dots li.slick-active button {
   background: #00b2a9;
@@ -2401,11 +2403,12 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     height: auto;
     overflow: hidden;
     display: block;
+    width: 90%;
   }
   .sub03 .sub3_sec05 article {
-    width: 100%;
     height: 100%;
     display: block;
+    margin: 0 auto;
   }
   .sub03 .sub3_sec05 article:first-child {
     width: 100%;
