@@ -274,6 +274,7 @@ footer > div .dropdown {
   position: relative;
   width: 200px;
   font-size: 14px;
+  z-index: 33;
 }
 footer > div .dropdown .dropdown-toggle {
   width: 100%;

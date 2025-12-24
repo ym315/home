@@ -56,19 +56,49 @@ $(document).ready(function(){
             }
 
                 //footer-drop down
+                // $(function () {
+                //     const $dropdown = $('.dropdown');
+                //     const $toggle = $('.dropdown-toggle');
+
+                //     $toggle.on('click', function (e) {
+                //         e.stopPropagation();
+                //         $dropdown.toggleClass('active');
+                //     });
+
+                //     $(document).on('click', function () {
+                //         $dropdown.removeClass('active');
+                //     });
+                // });
+
                 $(function () {
                     const $dropdown = $('.dropdown');
                     const $toggle = $('.dropdown-toggle');
 
+                    // 버튼 클릭
                     $toggle.on('click', function (e) {
+                        // console.log($(this).closest('.dropdown').length);
+                        e.preventDefault();
                         e.stopPropagation();
-                        $dropdown.toggleClass('active');
+                        e.stopImmediatePropagation();
+                        const $current = $(this).closest('.dropdown');
+
+                        //  드롭다운 닫기
+                        $dropdown.not($current).removeClass('active');
+                        // 현재 토글
+                        $current.toggleClass('active');
                     });
 
+                    // 바깥 클릭 시 닫기
                     $(document).on('click', function () {
                         $dropdown.removeClass('active');
                     });
+
+                    // 드롭다운 내부 클릭 시 닫히지 않게
+                    $('.dropdown-content').on('click', function (e) {
+                        e.stopPropagation();
+                    });
                 });
+
     }
     $(window).on('scroll',menuScroll);        
     //스크롤
