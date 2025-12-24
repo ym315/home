@@ -107,8 +107,7 @@ header{
         max-width: 1280px;        
         height: 100px;        
         h1{
-            width: 15%;
-            max-width: 170px;
+            width: 160px;            
             position: relative;            
             text-align: left;
             margin: 0;         
@@ -1689,9 +1688,8 @@ header{
         @include display_set(flex,space-around,center);
         height: 65px;
         position: relative;        
-        h1{
-            width: 30%;
-            max-width: 160px;
+        h1{            
+            width: 160px;
             margin:0 auto;
             position: relative;            
             a{@include display_set(flex,flex-start,center);}

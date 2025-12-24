@@ -113,8 +113,7 @@ header > div.head {
   height: 100px;
 }
 header > div.head h1 {
-  width: 15%;
-  max-width: 170px;
+  width: 160px;
   position: relative;
   text-align: left;
   margin: 0;
@@ -1959,8 +1958,7 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     position: relative;
   }
   header > div.head h1 {
-    width: 30%;
-    max-width: 160px;
+    width: 160px;
     margin: 0 auto;
     position: relative;
   }
