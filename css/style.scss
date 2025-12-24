@@ -632,18 +632,19 @@ main .title-center{
 
         }   
         .main-biz-img{
-            width: 60%;
-            border: 1px solid $eee;
-            padding: 10px;
-            border-radius: 10px;
-            height: 450px;
-            overflow: hidden;
+            width: 60%;            
+            padding: 10px;           
+            height: fit-content;
             margin: 0 auto; text-align: center;
+
             img{
                 width: auto; 
                 max-width: 100%; 
                 display: block; 
-                margin: 0 auto;}
+                margin: 0 auto;
+                border-radius: 20px;
+                overflow: hidden;            
+            }
         }
     }
 
@@ -2820,7 +2821,7 @@ main{
                 flex-direction: column;
                 height: auto;
             }   
-            .main-biz-img{width:90%; height: auto;}
+            .main-biz-img{width:95%; height: auto;}
         }        
         // .flow-wrap {
         //     min-width: 728px;
