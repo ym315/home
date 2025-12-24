@@ -270,11 +270,61 @@ footer > div .foot-info p {
   white-space: pre-line;
   letter-spacing: -0.4px;
 }
-footer > div .foot-family .family {
-  padding: 5px 15px;
+footer > div .dropdown {
+  position: relative;
+  width: 200px;
+  font-size: 14px;
 }
-footer > div .mobile-footer {
+footer > div .dropdown .dropdown-toggle {
+  width: 100%;
+  height: 40px;
+  padding: 0 36px 0 12px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+footer > div .dropdown .dropdown-toggle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #333;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+footer > div .dropdown .dropdown-content {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-bottom: none;
   display: none;
+  z-index: 1000;
+}
+footer > div .dropdown .dropdown-content a {
+  display: block;
+  padding: 10px 12px;
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+}
+footer > div .dropdown .dropdown-content a:hover {
+  background: #f5f5f5;
+}
+footer > div .dropdown.active .dropdown-content {
+  display: block;
+}
+footer > div .dropdown.active .dropdown-toggle::after {
+  transform: translateY(-50%) rotate(180deg);
 }
 
 aside {
@@ -2116,12 +2166,6 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
   footer > div .foot-info p {
     white-space: pre-line;
   }
-  footer > div .foot-family .family {
-    padding: 5px 15px;
-  }
-  footer > div .mobile-footer {
-    display: none;
-  }
   .sub_common div:last-child {
     width: 90%;
   }
@@ -2618,38 +2662,9 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     flex-wrap: wrap;
     max-width: 768px;
   }
-  footer > div .foot-family {
-    display: none;
-  }
-  footer > div .mobile-footer {
-    width: 100%;
-    margin: 30px 0 0 0;
-    padding: 10px 0;
-    display: inline-block;
-    border-top: 1px dashed #555;
-    color: #999;
-  }
-  footer > div .mobile-footer h4 {
-    font-size: 16px;
-    color: #fff;
-    font-weight: 400;
-    letter-spacing: 0.2rem;
-    color: #fff;
-  }
-  footer > div .mobile-footer ul {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  footer > div .mobile-footer ul li {
-    width: auto;
-    display: inline-block;
-    border: 1px solid currentColor;
-    background: transparent;
-    border-radius: 50px;
-    padding: 5px 15px;
-  }
-  footer > div .mobile-footer ul a {
-    color: currentColor;
+  footer > div .dropdown {
+    width: 50%;
+    margin-top: 20px;
   }
   .sub_common div:last-child {
     width: 90%;
@@ -2772,10 +2787,10 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     bottom: -25%;
   }
   .newmain .main-certifi .main-certifi-slide .slick-prev {
-    left: 40%;
+    left: 35%;
   }
   .newmain .main-certifi .main-certifi-slide .slick-next {
-    right: 40%;
+    right: 35%;
   }
   .newmain .main-news {
     min-width: 320px;

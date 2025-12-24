@@ -17,11 +17,9 @@ $(document).ready(function(){
                 }
                 $('body').toggleClass('active');   
             });
-
-            
-
     }
-    console.log('test 1');    
+
+
 
     //바닐라 스크롤Y / 제이커리는 scrollTop   
     function menuScroll(){
@@ -54,9 +52,23 @@ $(document).ready(function(){
 
                 $('.head nav>ul li ul').removeClass('on');
                 $('a.menu-trigger span').css('background','#fff')
-
                
             }
+
+                //footer-drop down
+                $(function () {
+                    const $dropdown = $('.dropdown');
+                    const $toggle = $('.dropdown-toggle');
+
+                    $toggle.on('click', function (e) {
+                        e.stopPropagation();
+                        $dropdown.toggleClass('active');
+                    });
+
+                    $(document).on('click', function () {
+                        $dropdown.removeClass('active');
+                    });
+                });
     }
     $(window).on('scroll',menuScroll);        
     //스크롤
@@ -74,24 +86,26 @@ $(document).ready(function(){
     // $(document).on("mouseleave", ".main-menu > li", function () {
     //     $(this).removeClass("open");
     // });
-$(document).on("mouseenter", ".main-menu > li", function () {
-    const $submenu = $(this).children(".sub-menu");
-    if ($submenu.length) {
-        $submenu.stop(true, true)
-            .css({ opacity: 0, display: "block" })
-            .animate({ opacity: 1 }, 150);
-    }
-});
+    $(document).on("mouseenter", ".main-menu > li", function () {
+        const $submenu = $(this).children(".sub-menu");
+        if ($submenu.length) {
+            $submenu.stop(true, true)
+                .css({ opacity: 0, display: "block" })
+                .animate({ opacity: 1 }, 150);
+        }
+    });
 
-$(document).on("mouseleave", ".main-menu > li", function () {
-    const $submenu = $(this).children(".sub-menu");
-    if ($submenu.length) {
-        $submenu.stop(true, true)
-            .animate({ opacity: 0 }, 150, function () {
-                $submenu.css("display", "none");
-            });
-    }
-});
+    $(document).on("mouseleave", ".main-menu > li", function () {
+        const $submenu = $(this).children(".sub-menu");
+        if ($submenu.length) {
+            $submenu.stop(true, true)
+                .animate({ opacity: 0 }, 150, function () {
+                    $submenu.css("display", "none");
+                });
+        }
+    });
+
+
 
     
 //end    
