@@ -117,6 +117,8 @@ header > div.head h1 {
   position: relative;
   text-align: left;
   margin: 0;
+  font-size: 0;
+  line-height: 0;
 }
 header > div.head nav {
   width: 75%;
