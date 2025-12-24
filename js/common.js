@@ -36,7 +36,7 @@ $(document).ready(function(){
                     console.log('헤더테스트')
                 } 
                 $('.main-menu > li').addClass('change');
-                $('#logo').attr('src', './img/logo_black.png');
+                $('#logo').attr('src', './img/logo_black.svg');
                 // $('.head h1 i').addClass('active');                
                 $('a.menu-trigger span').css('background','#000')
 
@@ -47,7 +47,7 @@ $(document).ready(function(){
                 // $('header').css("background","transparent");
                 $('header').removeClass("active");
                 $('.main-menu > li').removeClass('change');
-                $('#logo').attr('src', './img/logo_white.png');
+                $('#logo').attr('src', './img/logo_white.svg');
                 // $('.head h1 i').removeClass('active');
 
                 $('.head nav>ul li ul').removeClass('on');

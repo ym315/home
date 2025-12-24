@@ -212,14 +212,7 @@ footer{
         @include normal_layout(100%,0 auto,0);
         max-width: 1280px;
         .foot-info{
-            i{ 
-                background-image: url('../img/main-icon.png');            
-                background-position: -198px -0px;
-                background-repeat: no-repeat;
-                display: inline-block;
-                width:180px;
-                height: 50px;                
-            }
+            h2{img{ width: 160px; height: auto;}}
             p{white-space: pre-line; letter-spacing: -0.4px;}
 
         }
