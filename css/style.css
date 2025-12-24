@@ -2519,8 +2519,8 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     width: auto;
     margin: 0;
     position: relative;
-    width: 160px !important;
-    height: auto !important;
+    width: 160px;
+    height: 100%;
   }
   header > div.head h1 a {
     display: flex;
@@ -3213,20 +3213,5 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
   }
   .sub05 .sub5_sec06 div#daumRoughmapContainer1637039027966 {
     height: 250px;
-  }
-}
-@supports (-webkit-touch-callout: none) {
-  h1 {
-    font-size: 0;
-  }
-  h1 a {
-    width: 160px !important;
-    font-size: 0;
-    line-height: 0;
-  }
-  #logo {
-    width: 160px !important;
-    height: auto !important;
-    display: block !important;
   }
 }/*# sourceMappingURL=style.css.map */

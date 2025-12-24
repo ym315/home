@@ -2275,8 +2275,8 @@ main{
                 width: auto;                
                 margin:0;
                 position: relative;   
-                width:160px !important;                
-                height: auto !important;              
+                width:160px;                
+                height: 100%;              
                 a{@include display_set(flex,flex-start,center); height: 100%;}
                 img{display: block;}
             }
@@ -3400,19 +3400,3 @@ main{
     }//sub05 e
     
     }//media 768 end
-
-
-    @supports (-webkit-touch-callout: none) {
-    h1{font-size: 0;}
-    h1 a {
-        width: 160px !important;
-        font-size: 0;
-        line-height: 0;
-    }
-
-    #logo {
-        width: 160px !important;
-        height: auto !important;
-        display: block !important;
-    }
-}
