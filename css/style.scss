@@ -3403,8 +3403,11 @@ main{
 
 
     @supports (-webkit-touch-callout: none) {
+    h1{font-size: 0;}
     h1 a {
         width: 160px !important;
+        font-size: 0;
+        line-height: 0;
     }
 
     #logo {

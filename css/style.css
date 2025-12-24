@@ -3216,8 +3216,13 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
   }
 }
 @supports (-webkit-touch-callout: none) {
+  h1 {
+    font-size: 0;
+  }
   h1 a {
     width: 160px !important;
+    font-size: 0;
+    line-height: 0;
   }
   #logo {
     width: 160px !important;
