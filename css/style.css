@@ -114,20 +114,10 @@ header > div.head {
 }
 header > div.head h1 {
   width: 15%;
+  max-width: 170px;
   position: relative;
   text-align: left;
   margin: 0;
-}
-header > div.head h1 i {
-  background-image: url("../img/main-icon.png");
-  background-position: -190px 0px;
-  background-repeat: no-repeat;
-  display: inline-block;
-  width: 180px;
-  height: 50px;
-}
-header > div.head h1 i.active {
-  background-position: -387px 0px;
 }
 header > div.head nav {
   width: 75%;
@@ -480,9 +470,10 @@ main .title-center h4 {
   white-space: pre-line;
 }
 main .title-center p {
+  width: 90%;
   white-space: pre-line;
   line-height: 1.4em;
-  margin: 3vh 0;
+  margin: 3vh auto;
 }
 
 .newmain .main-bg {
@@ -625,7 +616,7 @@ main .title-center p {
 .newmain .slide-partner .ms-cover .ms-img img {
   width: 100%;
   height: 380px;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 .newmain .slide-partner .ms-cover .ms-txt {
   position: absolute;
@@ -645,14 +636,16 @@ main .title-center p {
   font-size: 16px;
 }
 .newmain .slide-partner .slick-prev, .newmain .slide-partner .slick-next {
-  z-index: 99;
+  display: none !important;
+  z-index: 3;
   color: currentColor;
   font-size: 0;
   opacity: 1;
   width: 40px;
   height: 40px;
-  top: auto;
-  bottom: -15%;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
 }
 .newmain .slide-partner .slick-prev:hover, .newmain .slide-partner .slick-next:hover {
   opacity: 1;
@@ -663,14 +656,8 @@ main .title-center p {
   color: currentColor;
   z-index: 3;
 }
-.newmain .slide-partner .slick-prev {
-  left: 47%;
-}
 .newmain .slide-partner .slick-prev:before {
   content: "<";
-}
-.newmain .slide-partner .slick-next {
-  right: 47%;
 }
 .newmain .slide-partner .slick-next:before {
   content: ">";
@@ -729,75 +716,67 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
   display: block;
   margin: 0 auto;
 }
-.newmain .flow-wrap {
-  width: 100%;
-  margin: 0 auto;
-  padding: 60px 10px;
-  overflow: hidden;
-  min-width: 1280px;
+.newmain .main-brand {
   background: #f5f5f5;
-  overflow: hidden;
+  padding: 30px 0;
 }
-.newmain .flow-wrap .flow {
+.newmain .main-brand-con .brand-menu {
+  text-align: center;
+}
+.newmain .main-brand-con .brand-menu .brand-subt {
+  background: #fff;
+  color: #003349;
+  border: 1px solid #003349;
+  display: inline-block;
+  padding: 8px 35px;
+  border-radius: 30px;
+  font-size: 1rem;
+  margin: 0px 10px 10px 0;
+  cursor: pointer;
+}
+.newmain .main-brand-con .brand-menu .brand-subt a {
+  color: currentColor;
+}
+.newmain .main-brand-con .brand-menu .active {
+  background: #003349;
+}
+.newmain .main-brand-con .brand-menu .active a {
+  color: #fff;
+  font-weight: 500;
+}
+.newmain .main-brand-con .brand-tab {
   display: flex;
-  animation: scroll 40s linear infinite;
+  justify-content: flex-start;
+  align-items: center;
+  display: -moz-flex;
+  display: -o-flex;
+  -webkit-flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 10px;
+  margin: 20px auto;
 }
-.newmain .flow-wrap .flow-reverse {
-  display: flex;
-  animation: scrollReverse 40s linear infinite;
-  margin-top: 20px;
-}
-.newmain .flow-wrap .img-box {
+.newmain .main-brand-con .brand-tab li {
   display: flex;
   justify-content: center;
   align-items: center;
   display: -moz-flex;
   display: -o-flex;
   -webkit-flex-wrap: wrap;
-  width: 160px;
-  height: 120px;
-  margin-right: 15px;
-  overflow: hidden;
-  flex-shrink: 0;
+  width: calc((100% - 50px) / 6);
+  height: 160px;
   background: #fff;
+  border: 1px solid #eee;
   border-radius: 5px;
+  overflow: hidden;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
-.newmain .flow-wrap .img-box img {
+.newmain .main-brand-con .brand-tab li img {
+  width: 100%;
+  max-width: 160px;
   height: 100%;
-  width: auto;
-  max-width: 90%;
   -o-object-fit: contain;
      object-fit: contain;
-  filter: grayscale(100%);
-  transition: filter 0.3s;
-}
-.newmain .flow-wrap .img-box:hover img {
-  filter: grayscale(0);
-  transform: scale(1.1);
-}
-@media (hover: hover) and (pointer: fine) {
-  .newmain .flow-top:hover {
-    animation-play-state: paused;
-  }
-  .newmain .flow-bottom:hover {
-    animation-play-state: paused;
-  }
-}
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-@keyframes scrollReverse {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+  display: block;
 }
 .newmain .main-certifi {
   display: flex;
@@ -843,7 +822,7 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
   width: auto;
   max-width: 60%;
   max-height: 120px;
-  background: rgba(255, 255, 255, 0.8);
+  background: #fff;
   padding: 10px;
   border-radius: 10px;
 }
@@ -1976,17 +1955,22 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     display: -moz-flex;
     display: -o-flex;
     -webkit-flex-wrap: wrap;
-    height: 60px;
+    height: 65px;
     position: relative;
   }
   header > div.head h1 {
     width: 30%;
+    max-width: 160px;
     margin: 0 auto;
     position: relative;
   }
-  header > div.head h1 img {
-    width: 100%;
-    max-width: 145px;
+  header > div.head h1 a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    display: -moz-flex;
+    display: -o-flex;
+    -webkit-flex-wrap: wrap;
   }
   header > div.head nav {
     display: none;
@@ -2192,10 +2176,10 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     z-index: 3;
   }
   .newmain .slide-partner .slick-prev {
-    left: 45%;
+    left: 3%;
   }
   .newmain .slide-partner .slick-next {
-    right: 45%;
+    right: 3%;
   }
   .newmain .main-biz {
     flex-wrap: wrap;
@@ -2217,6 +2201,22 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
   }
   .newmain .flow-wrap {
     min-width: 728px;
+  }
+  .newmain .main-brand {
+    background: #f5f5f5;
+    padding: 30px 0;
+  }
+  .newmain .main-brand-con {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .newmain .main-brand-con .brand-tab li {
+    width: calc((100% - 20px) / 3);
+    height: 160px;
+  }
+  .newmain .main-brand-con .brand-tab li img {
+    max-width: 140px;
   }
   .newmain .main-certifi {
     min-width: 728px;
@@ -2452,7 +2452,7 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     margin: 0 auto;
     padding: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     display: -moz-flex;
     display: -o-flex;
@@ -2461,16 +2461,24 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     position: relative;
   }
   header > div.head h1 {
-    width: 30%;
-    margin: 0 auto;
+    width: auto;
+    margin: 0;
     position: relative;
+    width: 30%;
+    max-width: 160px;
+    height: 100%;
   }
-  header > div.head h1 i {
-    background-position: -176px -103px;
-    width: 150px;
+  header > div.head h1 a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    display: -moz-flex;
+    display: -o-flex;
+    -webkit-flex-wrap: wrap;
+    height: 100%;
   }
-  header > div.head h1 i.active {
-    background-position: -347px -103px;
+  header > div.head h1 img {
+    display: block;
   }
   header > div.head nav {
     display: none;
@@ -2677,6 +2685,10 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     position: relative;
     padding: 20px 10px;
   }
+  .newmain .slide-partner .ms-cover .ms-img img {
+    height: auto;
+    min-height: 230px;
+  }
   .newmain .slide-partner .ms-cover .ms-txt {
     position: absolute;
     top: 50%;
@@ -2685,15 +2697,15 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     text-align: center;
     width: 80%;
   }
+  .newmain .slide-partner .ms-cover .ms-txt h3 {
+    font-size: 22px;
+  }
+  .newmain .slide-partner .ms-cover .ms-txt p {
+    font-size: 15px;
+  }
   .newmain .slide-partner .slick-prev, .newmain .slide-partner .slick-next {
     z-index: 3;
     position: absolute;
-  }
-  .newmain .slide-partner .slick-prev {
-    left: 42%;
-  }
-  .newmain .slide-partner .slick-next {
-    right: 42%;
   }
   .newmain .main-biz {
     flex-wrap: wrap;
@@ -2714,12 +2726,20 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
     width: 90%;
     height: auto;
   }
-  .newmain .flow-wrap {
-    min-width: 728px;
+  .newmain .main-brand-con {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
   }
-  .newmain .flow-wrap .img-box img {
-    filter: grayscale(0);
-    max-width: 80%;
+  .newmain .main-brand-con .brand-menu .brand-subt {
+    padding: 8px 22px;
+  }
+  .newmain .main-brand-con .brand-tab li {
+    width: calc((100% - 10px) / 2);
+    height: 160px;
+  }
+  .newmain .main-brand-con .brand-tab li img {
+    max-width: 140px;
   }
   .newmain .main-certifi {
     width: 90%;
