@@ -432,9 +432,9 @@ main .title-center{
     .main-bg{
         position: relative;
             .bg-video {
-                width: 100%;             
-                height: 80vh;
                 position: relative;
+                width: 100%;             
+                height: 70vh;                
                 background-color: $basicblck;
                     .bg-video-content {
                         opacity: .8;
@@ -444,9 +444,17 @@ main .title-center{
                         object-position: center 100%;
                     }
             }
+            .bg-cover {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 1920px;
+                height: 100%;
+            }
             .bg-content{
                 position: absolute;
-                top:50%; transform: translateY(-50%);
+                top: 50%; transform: translateY(-50%);
                 left:320px;
                 color: $basicwhite;
                 letter-spacing: -.08rem;
@@ -1906,6 +1914,11 @@ main{
             .bg-video{
                 min-width: auto;
             }
+            .bg-cover {
+                width: 100%;
+                left: 0;
+                transform: translateY(-50%);
+            }
             .bg-content{                
                 top:50%; 
                 left:50%; 
@@ -2260,8 +2273,8 @@ main{
                 width: auto;                
                 margin:0;
                 position: relative;   
-                width:160px;                
-                height: 100%;              
+                width:160px !important;                
+                height: auto !important;              
                 a{@include display_set(flex,flex-start,center); height: 100%;}
                 img{display: block;}
             }
@@ -2758,6 +2771,11 @@ main{
         .main-bg{
                 .bg-video{
                     min-width: auto;
+                }
+                .bg-cover {
+                    width: 100%;
+                    left: 0;
+                    transform: translateY(-50%);
                 }
                 .bg-content{                
                     top:50%; 

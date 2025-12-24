@@ -27,7 +27,7 @@ $(document).ready(function(){
             top = $(window).scrollTop(),
             headerHeight = $('.sub_common').height();
 
-            if(top > winHeight/3){
+            if(top > winHeight/4){
                 $('aside').show();
                 $('header').addClass("active");
                 // $('header').css("background","rgba(255,255,255,1)");
