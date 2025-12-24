@@ -2259,8 +2259,7 @@ main{
                 width: auto;                
                 margin:0;
                 position: relative;   
-                width:30%;
-                max-width: 160px;
+                width:160px;                
                 height: 100%;              
                 a{@include display_set(flex,flex-start,center); height: 100%;}
                 img{display: block;}
