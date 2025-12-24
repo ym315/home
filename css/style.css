@@ -3214,4 +3214,14 @@ nebula .newmain .main-biz .biz-div .more:hover::after {
   .sub05 .sub5_sec06 div#daumRoughmapContainer1637039027966 {
     height: 250px;
   }
+}
+@supports (-webkit-touch-callout: none) {
+  h1 a {
+    width: 160px !important;
+  }
+  #logo {
+    width: 160px !important;
+    height: auto !important;
+    display: block !important;
+  }
 }/*# sourceMappingURL=style.css.map */

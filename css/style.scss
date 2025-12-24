@@ -3400,3 +3400,16 @@ main{
     }//sub05 e
     
     }//media 768 end
+
+
+    @supports (-webkit-touch-callout: none) {
+    h1 a {
+        width: 160px !important;
+    }
+
+    #logo {
+        width: 160px !important;
+        height: auto !important;
+        display: block !important;
+    }
+}
