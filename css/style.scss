@@ -7,7 +7,7 @@
 
 /*공통 css*/
 $basicmint : #00b2a9;
-$basicblue: #003349;
+$basicblue: #00284b;
 $basicwhite : #fff;
 $basicblck : #000;
 $basicgray:#666;
@@ -30,12 +30,15 @@ h1,h2,h3,h4,h5,h6,p {margin:0 auto; padding:0;}
 .table{border-collapse: collapse;}
 figure{margin:0; padding:0;}
 img{
-    image-rendering: -moz-crisp-edges; /* firefox */
-    image-rendering: -o-crisp-edges; /* opera */
-    image-rendering: -webkit-optimize-contrast; /* chrome(비표준) */
-    image-rendering: crisp-edges;
-    transform:translateZ(0);
-    backface-visibility:hidden;
+    // image-rendering: -moz-crisp-edges; /* firefox */
+    // image-rendering: -o-crisp-edges; /* opera */
+    // image-rendering: -webkit-optimize-contrast; /* chrome(비표준) */
+    // image-rendering: crisp-edges;
+    // transform:translateZ(0);
+    // backface-visibility:hidden;
+    width: 100%;
+    height: auto;    
+    
 }
 
 
@@ -431,6 +434,28 @@ main .title-center{
 // 서브1_1 회사 소개
 
 .newmain{
+    position: relative;
+    .popup{
+        position: absolute;
+        z-index: 999;
+        top:30px; 
+        left:50%; transform: translateX(-50%);
+        width:100%;
+        max-width: 460px;
+        img{
+            display: block;
+            max-width: 100%;
+        }
+        .close{
+            background: $basicblue;
+            color: $basicwhite;
+            text-align: center;
+            padding-right:10px;
+            cursor: pointer;
+            padding: 5px;
+            margin-top: -1px;
+        }
+    }
     .main-bg{
         position: relative;
             .bg-video {
@@ -965,50 +990,126 @@ main .title-center{
         }
     }
    
+    // .sub2_history{
+    //     @include normal_layout(100%,0 auto,10vh 0);
+    //     position: relative;
+    //     article{max-width:1600px;}
+    //     article:last-child{max-width:none;}
+    //     .line{
+    //         position: absolute;
+    //         top:0; left:50%; 
+    //         transform: translateX(-50%);
+    //         background:$basicsoftgray;
+    //         width:2px;
+    //         height:100%;
+    //         z-index: -1;
+    //     }
+    //     >article{
+    //         //공통
+    //         position: relative;
+    //         @include display_set(flex,space-around,flex-start);
+    //         padding:3vh 0;
+    //         &.left, &.right{
+    //             width:80%;
+    //             margin:0 auto;                
+    //             .topcenter{
+    //                 margin-top:10%;
+    //             }
+    //         }
+    //         &.left{
+    //             text-align: left; 
+    //             .history{
+    //                 padding-left:20px;
+    //                 .year{&::before{left:-28px;}}    
+    //             }
+    //         }
+    //         &.right{
+    //             text-align: right;
+    //             .history{
+    //                 padding-right:20px;
+    //                 .year{&::before{right:-28px;}}
+    //             }
+    //         }
+    //         &.sub2_banner{
+    //             @include normal_layout(100%,0 auto,0);
+    //             height:150px;
+    //             position:relative;
+    //             background: url('../img/main_bg.jpg');
+    //             background-repeat: no-repeat;
+    //             background-size: cover;
+    //             background-attachment : fixed;
+    //             background-color: rgba(0,0,0,0.8);
+    //             background-blend-mode: multiply;
+    //             @include display_set(flex,center,center);
+    //             color:$basicwhite;                
+    //             text-align: center;
+    //             font-size: 1rem;
+    //             margin:5vh 0;
+    //             letter-spacing: -.1rem;
+    //         }
+    //         &.m_only{
+    //             display: none;
+    //         }
+    //         .thum, .history{width:50%;}
+    //         .thum{
+    //         &.left {
+    //             text-align: left;
+    //             padding-left:5%;
+    //         }
+    //             img{
+    //                 width:90%; margin:0 auto;
+    //             &.large{width:75%;}
+    //             }
+    //         }
+    //         .history{
+    //             >div{margin-bottom:30px;}
+    //             .year{
+    //                 color:$basicmint;
+    //                 font-size: 2rem;
+    //                 font-weight: bold;
+    //                 display: block;
+    //                 padding-bottom:1vh;
+    //                 position: relative;
+    //                 &::before{
+    //                     content:'';
+    //                     display: inline-block;
+    //                     width:8px;
+    //                     height:8px;
+    //                     border: 4px solid $basicmint;                                                
+    //                     border-radius: 50%; 
+    //                     vertical-align: middle;      
+    //                     background: $basicwhite;    
+    //                     position: absolute;
+    //                     top:45%; 
+    //                     transform: translateY(-45%);
+    //                 }
+    //             }//year
+    //             p{
+    //                 position: relative;
+    //                 white-space: pre-line;
+    //                 &::before{
+    //                     content:'- ';                        
+    //                     vertical-align: middle;
+    //                 }
+    //             }//p
+    //         }//history
+    //     }//article
+    // }
     .sub2_history{
         @include normal_layout(100%,0 auto,10vh 0);
-        position: relative;
-        article{max-width:1600px;}
-        article:last-child{max-width:none;}
-        .line{
-            position: absolute;
-            top:0; left:50%; 
-            transform: translateX(-50%);
-            background:$basicsoftgray;
-            width:2px;
-            height:100%;
-            z-index: -1;
-        }
-        >article{
-            //공통
-            position: relative;
-            @include display_set(flex,space-around,flex-start);
-            padding:3vh 0;
-            &.left, &.right{
-                width:80%;
-                margin:0 auto;                
-                .topcenter{
-                    margin-top:10%;
-                }
-            }
-            &.left{
-                text-align: left; 
-                .history{
-                    padding-left:20px;
-                    .year{&::before{left:-28px;}}    
-                }
-            }
-            &.right{
-                text-align: right;
-                .history{
-                    padding-right:20px;
-                    .year{&::before{right:-28px;}}
-                }
-            }
-            &.sub2_banner{
-                @include normal_layout(100%,0 auto,0);
-                height:150px;
+        article{
+            width:1280px;             
+            margin: 0 auto;
+            @include display_set(flex,space-between,flex-start);
+            margin-bottom: 6vh;
+            // &.date{margin-bottom: 10vh;}
+            &.sub2-cover{
+                width: 100%;
+                max-width: 1280px;
+                height:250px;
+                border-radius: 20px;
                 position:relative;
+                // background: url('../img/main_bg.jpg');
                 background: url('../img/main_bg.jpg');
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -1019,56 +1120,72 @@ main .title-center{
                 color:$basicwhite;                
                 text-align: center;
                 font-size: 1rem;
-                margin:5vh 0;
                 letter-spacing: -.1rem;
             }
-            &.m_only{
-                display: none;
+            &.sub2-cover2{
+                @include display_set(flex,space-between,center);
+                img{width: 49.8%;}
+                border-radius: 20px;
+                overflow: hidden;
             }
-            .thum, .history{width:50%;}
-            .thum{
-            &.left {
-                text-align: left;
-                padding-left:5%;
-            }
-                img{
-                    width:90%; margin:0 auto;
-                &.large{width:75%;}
+        }
+        h2{
+            font-size: 40px; 
+            color:$basicmint; 
+            text-align: left;
+            margin: 0;
+        }
+        .history-wrap{
+            width:80%;
+            @include display_set(flex,space-between,flex-start);
+            position: relative;
+            >div{width:48%;}
+            .history-detail{
+                position: relative;
+                &:before{
+                        content: "";
+                        position: absolute;
+                        left: 4.5px;
+                        top: 10px;
+                        bottom: 0;
+                        width: 1px; 
+                        background: $ccc;
+                        z-index: 0;
                 }
             }
             .history{
-                >div{margin-bottom:30px;}
-                .year{
-                    color:$basicmint;
-                    font-size: 2rem;
-                    font-weight: bold;
-                    display: block;
-                    padding-bottom:1vh;
-                    position: relative;
-                    &::before{
-                        content:'';
+                @include display_set(flex,flex-start,flex-start);
+                position: relative;
+                h3{
+                    width:13%; 
+                    margin:0; 
+                    vertical-align: middle;
+                    span{
+                        content: "";
                         display: inline-block;
-                        width:8px;
-                        height:8px;
-                        border: 4px solid $basicmint;                                                
-                        border-radius: 50%; 
-                        vertical-align: middle;      
-                        background: $basicwhite;    
-                        position: absolute;
-                        top:45%; 
-                        transform: translateY(-45%);
-                    }
-                }//year
-                p{
-                    position: relative;
-                    white-space: pre-line;
-                    &::before{
-                        content:'- ';                        
+                        position: relative;
+                        width: 10px;
+                        height: 10px;    
+                        border: 2px solid $basicmint;
+                        border-radius: 50%;
                         vertical-align: middle;
+                        background: $basicwhite;
+                        margin-right:10px;
+                        z-index: 3;
                     }
-                }//p
-            }//history
-        }//article
+                }
+                p{                    
+                    width:86%;
+                    white-space: pre-line;
+                    line-height: 2em;
+                }
+            }
+        }
+
+
+
+        
+
     }
 
     .width80 {
@@ -1089,7 +1206,7 @@ main .title-center{
             a{color:$c23;}
             img{width:100%;}
             .border_txt{
-                border-top: 1px solid $basicsoftgray;
+                // border-top: 1px solid $basicsoftgray;
                 padding:10px;
                 h3{
                     font-size: 1.1rem; font-weight: bold;
@@ -1719,6 +1836,74 @@ main .title-center{
     }
 }//sub05 e
 
+.sub07{
+    .sub7_sec01{
+        position: relative;        
+        &:after{
+            content:'';
+            position:absolute;
+            top:0; left:0;
+            bottom:0; right:0;
+            opacity: 0.5;
+            background: url('../img/sub02_1.jpg') center;
+            background-size: cover;        
+        }
+    }
+    .sub7{
+        @include normal_layout(100%,0 auto,10vh 0);
+        position: relative;
+        >article{            
+            width: 80%;
+            margin: 0 auto;
+            .notice-table{
+                @include normal_layout(100%,0 auto,0);
+                max-width: 1200px;
+                .board-header, .board-row{
+                    @include display_set(flex,space-between,center);                   
+                    text-align: center;
+                    flex-shrink: 0;
+                    padding:15px 10px;
+                    font-size: 15px;
+                }
+                .board-header{                    
+                    background: $eee;
+                }             
+                .board-row{border-bottom: 1px solid $ccc;}   
+                .b-num{width:80px;}                
+                .b-date{width:100px;}
+            }
+            .notice-con{
+                @include normal_layout(100%,0 auto,0);
+                max-width: 1200px;                
+                p{padding: 10px;}
+                .bd-title{
+                    font-size: 20px; font-weight: 600;
+                    border-top: 1px solid $c999;
+                    padding-top: 15px;
+                }
+                .bd-date{background: $eee;}
+                .bd-con{
+                    white-space: pre-line;
+                    border-bottom: 1px solid $c999;
+                    padding-bottom: 20px;
+                }
+                >div{
+                    margin-top: 20px;;
+                    
+                    .notice-back{
+                        border:1px solid $ccc; 
+                        padding:10px 20px;
+                        background: $eee;
+
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
 
 
 /*미디어 쿼리*/
@@ -2118,6 +2303,49 @@ main{
                 }
             }
         }//2n+2
+    }
+
+    .sub2_history{
+            @include normal_layout(95%,0 auto,10vh 0);
+            article{
+                max-width:1279px;
+                width: 100%;                
+                &.sub2-cover{
+                    width: 100%;
+                    max-width: 1279px;
+                    height:200px;
+                    border-radius: 8px;
+                }
+                &.sub2-cover2{                    
+                    width:100%;
+                    img{width: 49.5%;}
+                    border-radius: 8px;
+                    overflow: hidden;
+                }
+            }
+            h2{
+                width: 100%;                
+                text-align: center;
+                margin-bottom:2vh;                
+            }
+            .history-wrap{
+                width:100%;                
+                >div{width:100%;}
+                .history-detail{                    
+                    padding-bottom:3vh;
+                    &:before{
+                            content: "";
+                            content: none;
+                    }
+                }
+                .history{
+                    @include display_set(flex,flex-start,flex-start);
+                    position: relative;                    
+                    border-bottom: 1px solid $ccc;
+                    padding-bottom: 2vh;
+                    margin-bottom: 2vh;
+                }
+            }
     }
 
     .news_list{
@@ -2770,6 +2998,9 @@ main{
     // }//sub1 main
     // 202209추가
     .newmain{
+        .popup{    
+        width: 95%;
+        }
         .main-bg{
                 .bg-video{
                     min-width: auto;
@@ -2999,68 +3230,117 @@ main{
                 }
             }//2n+2
         }
-        .sub2_history{
-            .line{
-                display: none;
+    .sub2_history{
+            @include normal_layout(95%,0 auto,10vh 0);
+            article{
+                max-width:767px;
+                width: 100%;                
+                &.sub2-cover{
+                    width: 100%;
+                    max-width: 767px;
+                    height:200px;
+                    border-radius: 8px;
+                }
+                &.sub2-cover2{                    
+                    width:100%;
+                    img{width: 49.5%;}
+                    border-radius: 8px;
+                    overflow: hidden;
+                }
             }
-            .m_only{display: flex;}
-            .pc_only{display: none;}
-            >article{
-                //공통
-                position: relative;
-                @include display_set(flex,space-around,flex-start);
-                padding:1vh 0;
-                &.left, &.right{
-                    width:95%;
-                    margin:0 auto;                
-                }
-                &.left,.right {text-align: center;}
-                &.left, &.right{
-                    text-align: center;
-                    .history{
-                        padding-left:0;
-                        padding-right:0;
-                        .year{&::before{left:50%;}}               
-                    }
-                }
-
-                &.sub2_banner{
-                    height:20vh;
-                    font-size: 1rem;
-                }
-
-                .thum, .history{width:100%;}
-                .thum{
-                &.left{
-                    padding:inherit;
-                    text-align: center;
-                }
-                    img{
-                        max-width: 400px;
-                    &.large{
-                        width:90%;
-                    }
+            h2{
+                width: 100%;                
+                text-align: center;
+                margin-bottom:2vh;                
+            }
+            .history-wrap{
+                width:100%;                
+                >div{width:100%;}
+                .history-detail{                    
+                    padding-bottom:3vh;
+                    &:before{
+                            content: "";
+                            content: none;
                     }
                 }
                 .history{
-                    // >div{margin-bottom:30px;}
-                    .year{
-                        &:before{
-                            display: block;
-                            left:50%; 
-                            transform: translateX(-50%);
-                            border:none;
-                            height:1px;
-                            background:$basicmint;
-                            width:90%;
-                            bottom:0; top:90%;
-                        }
-                        }
+                    @include display_set(flex,flex-start,flex-start);
+                    position: relative;                    
+                    border-bottom: 1px solid $ccc;
+                    padding-bottom: 2vh;
+                    margin-bottom: 2vh;
+                    // h3{
+                    //     span{
+
+                    //     }
+                    // }
+                    // p{}
+                }
+            }
+    }
+
+        // .sub2_history{
+        //     .line{
+        //         display: none;
+        //     }
+        //     .m_only{display: flex;}
+        //     .pc_only{display: none;}
+        //     >article{
+        //         //공통
+        //         position: relative;
+        //         @include display_set(flex,space-around,flex-start);
+        //         padding:1vh 0;
+        //         &.left, &.right{
+        //             width:95%;
+        //             margin:0 auto;                
+        //         }
+        //         &.left,.right {text-align: center;}
+        //         &.left, &.right{
+        //             text-align: center;
+        //             .history{
+        //                 padding-left:0;
+        //                 padding-right:0;
+        //                 .year{&::before{left:50%;}}               
+        //             }
+        //         }
+
+        //         &.sub2_banner{
+        //             height:20vh;
+        //             font-size: 1rem;
+        //         }
+
+        //         .thum, .history{width:100%;}
+        //         .thum{
+        //         &.left{
+        //             padding:inherit;
+        //             text-align: center;
+        //         }
+        //             img{
+        //                 max-width: 400px;
+        //             &.large{
+        //                 width:90%;
+        //             }
+        //             }
+        //         }
+        //         .history{
+        //             // >div{margin-bottom:30px;}
+        //             .year{
+        //                 &:before{
+        //                     display: block;
+        //                     left:50%; 
+        //                     transform: translateX(-50%);
+        //                     border:none;
+        //                     height:1px;
+        //                     background:$basicmint;
+        //                     width:90%;
+        //                     bottom:0; top:90%;
+        //                 }
+        //                 }
                         
 
-                }//history
-            }//article
-        }
+        //         }//history
+        //     }//article
+        // }
 
 
 

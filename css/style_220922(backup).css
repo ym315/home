@@ -263,7 +263,6 @@ aside div ul li:first-child:before {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*article*/
 }
 .main_sec02 > article {
   width: 50%;
@@ -365,6 +364,9 @@ aside div ul li:first-child:before {
 .main_sec02 > article:last-child > p:hover a {
   color: #003349;
   font-weight: 700;
+}
+.main_sec02 {
+  /*article*/
 }
 .main_sec02 div {
   width: 80%;
@@ -707,7 +709,6 @@ main .title p {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*article*/
 }
 .sub01 .main_sec02 > article {
   width: 50%;
@@ -804,6 +805,9 @@ main .title p {
 .sub01 .main_sec02 > article:last-child > p:hover a {
   color: #003349;
   font-weight: 700;
+}
+.sub01 .main_sec02 {
+  /*article*/
 }
 .sub01 .main_sec02 div {
   width: 80%;
@@ -1479,8 +1483,6 @@ main .title p {
   display: -moz-flex;
   display: -o-flex;
   -webkit-flex-wrap: wrap;
-  /*버튼*/
-  /*indigater*/
 }
 .sub03 .sub3_sec05 article.slide .slide_div {
   width: 100%;
@@ -1493,6 +1495,9 @@ main .title p {
   max-width: 53%;
   height: auto;
   margin: 0 auto;
+}
+.sub03 .sub3_sec05 article.slide {
+  /*버튼*/
 }
 .sub03 .sub3_sec05 article.slide .slick-prev,
 .sub03 .sub3_sec05 article.slide .slick-next {
@@ -1520,6 +1525,9 @@ main .title p {
 .sub03 .sub3_sec05 article.slide .slick-next:after {
   content: ">";
   font-size: 15px;
+}
+.sub03 .sub3_sec05 article.slide {
+  /*indigater*/
 }
 .sub03 .sub3_sec05 article.slide .slick-dots {
   position: absolute;
@@ -1904,7 +1912,6 @@ main .title p {
     height: auto;
     margin: 0 auto;
     display: block;
-    /*article*/
   }
   .sub01 .main_sec02 > article {
     width: 100%;
@@ -1913,6 +1920,9 @@ main .title p {
   }
   .sub01 .main_sec02 > article:first-child {
     text-align: center;
+  }
+  .sub01 .main_sec02 {
+    /*article*/
   }
   .sub01 .main_sec02 div {
     width: 80%;
@@ -2390,7 +2400,6 @@ main .title p {
     height: auto;
     margin: 0 auto;
     display: block;
-    /*article*/
   }
   .sub01 .main_sec02 > article {
     width: 100%;
@@ -2423,6 +2432,9 @@ main .title p {
   }
   .sub01 .main_sec02 > article:last-child div ul li:nth-of-type(2n) {
     margin-left: 2%;
+  }
+  .sub01 .main_sec02 {
+    /*article*/
   }
   .sub01 .main_sec02 div {
     width: 90%;
@@ -2671,14 +2683,13 @@ main .title p {
   .sub03 .sub3_sec05 article:first-child div p {
     white-space: inherit;
   }
-  .sub03 .sub3_sec05 article.slide {
-    /*버튼*/
-    /*indigater*/
-  }
   .sub03 .sub3_sec05 article.slide .slide_div img {
     width: 90%;
     max-width: 90%;
     margin-bottom: 2vh;
+  }
+  .sub03 .sub3_sec05 article.slide {
+    /*버튼*/
   }
   .sub03 .sub3_sec05 article.slide .slick-prev:after {
     content: "<";
@@ -2693,6 +2704,9 @@ main .title p {
   .sub03 .sub3_sec05 article.slide .slick-next:after {
     content: ">";
     font-size: 20px;
+  }
+  .sub03 .sub3_sec05 article.slide {
+    /*indigater*/
   }
   .sub03 .sub3_sec05 article.slide .slick-dots li button {
     width: 20px;
